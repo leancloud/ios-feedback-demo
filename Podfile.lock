@@ -1,0 +1,20 @@
+PODS:
+  - AVOSCloud (2.6.10)
+  - AVOSCloudSNS (2.6.10):
+    - AVOSCloud
+
+DEPENDENCIES:
+  - AVOSCloud (from `https://download.avoscloud.com/sdk/iOS/current/AVOSCloud.podspec`)
+  - AVOSCloudSNS (from `https://download.avoscloud.com/sdk/iOS/current/AVOSCloudSNS.podspec`)
+
+EXTERNAL SOURCES:
+  AVOSCloud:
+    :podspec: https://download.avoscloud.com/sdk/iOS/current/AVOSCloud.podspec
+  AVOSCloudSNS:
+    :podspec: https://download.avoscloud.com/sdk/iOS/current/AVOSCloudSNS.podspec
+
+SPEC CHECKSUMS:
+  AVOSCloud: b517869efde25d5532e869287f29a6238554d3bf
+  AVOSCloudSNS: 1e8ae2436b5ca2117091fce261ed6dde9e14e78e
+
+COCOAPODS: 0.35.0
