@@ -5,9 +5,7 @@
 
 ## 如何运行
 
-1. 用XCode打开FeedbackDemo.xcodeproj，选择运行的scheme和设备，点击运行按钮或菜单`Product`->`Run`或快捷键`Command(⌘)`+`r`就可以运行此示例
-
-2. 如果你想获取最新发布的SDK，你也可以使用`cocoapods`,将`Frameworks`目录下的文件删除，然后在终端执行代码:
+你可以使用`cocoapods`,将`Frameworks`目录下的文件删除，然后在终端执行代码:
 
 	    pod install
 
@@ -20,6 +18,16 @@
 ### 替换 App 信息
 
 示例使用的是公共的 app id 和 app key，您可以在`AppDelegate.m`修改成您自己的应用 id 和 key。
+
+### 反馈页面无法返回怎么办
+
+如果你的意见反馈页面出现如上图所示的界面，这时候你会发现，导航条左边的返回或者取消按钮不存在，所以会导致用户无法退出这个页面。
+
+其实 LeanCloud Feedback 组件中默认的意见反馈页面是有一个返回按钮的，出现这个问题的原因在于 LeanCloud SDK 的资源文件没有被加载进来。你可以通过如下步骤来解决这个问题：
+
+- 找到 ./Pods/AVOSCloud/iOS/```release-va.b.c```/AVOSCloud.framework 这个文件(这里```va.b.c```是具体的版本号，例如目前我们最新发布的是v3.0.2，所以对应的路径是```release-v3.0.2```)
+- 右键点击```AVOSCloud.framework```，选择「在新窗口中打开」（或者「Open in New Tab」）
+- 这时候你会看到```AVOSCloud.bundle```这个文件，将它拖到工程里面即可。
 
 
 ## 其他
