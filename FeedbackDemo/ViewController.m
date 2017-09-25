@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-#import <AVOSCloud/AVOSCloud.h>
+#import <LeanCloudFeedback/LeanCloudFeedback.h>
 
 @interface ViewController ()
 
@@ -29,7 +29,7 @@
 }
 
 - (IBAction)feedbackButtonClicked:(id)sender {
-    AVUserFeedbackAgent *agent = [AVUserFeedbackAgent sharedInstance];
+    LCUserFeedbackAgent *agent = [LCUserFeedbackAgent sharedInstance];
     [agent showConversations:self title:@"feedback" contact:@"test@avoscloud.com"];
 }
 @end
